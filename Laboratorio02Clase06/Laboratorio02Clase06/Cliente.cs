@@ -21,15 +21,16 @@ namespace Laboratorio02Clase06
         private string _nombre;
         private eTipoCliente _tipoDeCliente;
 
-        static Cliente()
+        private Cliente()
         {
- 
+            CrearAlias();
         }
 
         public Cliente(eTipoCliente cliente, string nombre)
         {
             this._tipoDeCliente = cliente;
             this._nombre = nombre;
+            
         }
 
         public Cliente(eTipoCliente cliente, string nombre, string nacionalidad)
@@ -47,7 +48,8 @@ namespace Laboratorio02Clase06
         private void CrearAlias()
         {
             Random numero = new Random();
-            this._aliasParaIncognito = numero.Next(1111, 9999) + this._nacionalidad + eTipoCliente.EmpresarioCorrupto;
+            this._aliasParaIncognito = numero.Next(1000, 9999) + this._nacionalidad + this._tipoDeCliente;
+            
 
         }
 
@@ -55,17 +57,18 @@ namespace Laboratorio02Clase06
         {
 
 
-            return this._aliasParaIncognito;
+            return this._aliasParaIncognito;//
         }
 
         private string RetornarDatos()
         {
-            return "0";
+            string datos = this._nombre + this._nacionalidad + this._tipoDeCliente + GetAlias();
+            return datos;
         }
 
         public string RetornarDatos(Cliente unCliente)
         {
-            return "0";
+            return unCliente.RetornarDatos();
         }
 
         

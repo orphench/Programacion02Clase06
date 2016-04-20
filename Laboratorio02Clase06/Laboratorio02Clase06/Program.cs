@@ -10,6 +10,7 @@ namespace Laboratorio02Clase06
     {
         static void Main(string[] args)
         {
+
         }
     }
 }

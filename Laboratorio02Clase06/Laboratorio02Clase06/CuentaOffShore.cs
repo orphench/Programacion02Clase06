@@ -16,25 +16,27 @@ namespace Laboratorio02Clase06
      */
         private eTipoBeneficio beneficio;
         public static int cantidadDeCuentas;
+        private List<Cliente> _listadoClientes;
         private eParaisosFiscales lugar;
+
+        public CuentaOffShore()
+        {
+            cantidadDeCuentas++;
+            this.lugar = eParaisosFiscales.Bahamas;
+            this._listadoClientes = new List<Cliente>();
+        }
 
         static CuentaOffShore()
         {
             //this.beneficio = beneficio;
             //this.lugar = lugar;
             cantidadDeCuentas = 0;
-        }
+        }      
 
-        public CuentaOffShore()
-        {
-            cantidadDeCuentas = 0;
-            //this.lugar = lugar;
-        }
-
-        private CuentaOffShore()
-        {
+        //private CuentaOffShore()
+        //{
             
-        }
+        //}
 
         public CuentaOffShore(eParaisosFiscales lugar)
         {

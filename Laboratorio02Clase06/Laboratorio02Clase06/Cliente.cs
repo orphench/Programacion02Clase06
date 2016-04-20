@@ -8,5 +8,49 @@ namespace Laboratorio02Clase06
 {
     class Cliente
     {
+        /*CREAR ALIAS: CREA EL ALIAS CONCATENANDO UN NUMERO RANDON DE CUATRO CIFRAS
+         * CON LA NACIONALIDAD Y EL TIPO DE CLIENTE, INVOCARLO A ESTE METODO
+         * EN EL CONSTUCTOR POR DEFECTO.
+         * GET ALIAS: RETORNA EL ALIAS.
+         * RETORNAR DATOS(DE INSTANCIA Y PRIVADO): RETORNA UN STRING CON TODOS LOS DATOS.
+         * RETORNAR DATOS(ESTATICO Y PUBLICO): RETORNA UN STRING CON TODOS LOS DATOS,
+         * UTILIZAR EL METODO DE INSTANCIA.
+         */
+        private string _aliasParaIncognito;
+        private string _nacionalidad;
+        private string _nombre;
+        private eTipoCliente _tipoDeCliente;
+
+        private static Cliente()
+        {
+ 
+        }
+
+        public Cliente(eTipoCliente cliente, string nombre)
+        {
+            this._tipoDeCliente = cliente;
+            this._nombre = nombre;
+        }
+
+        public Cliente(eTipoCliente cliente, string nombre, string nacionalidad)
+        {
+            this._tipoDeCliente = cliente;
+            this._nombre = nombre;
+            this._nacionalidad = nacionalidad;
+        }
+
+        public Cliente(string nombre)
+        {
+            this._nombre = nombre;
+        }
+
+        enum eTipoCliente
+        {
+            PoliticoCorrupto,
+            EmpresarioCorrupto,
+            JugadorDeFutbol,
+            Financista,
+            MaestroRural
+        }
     }
 }

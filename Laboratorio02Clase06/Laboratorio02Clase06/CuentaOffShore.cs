@@ -23,7 +23,7 @@ namespace Laboratorio02Clase06
         {
             cantidadDeCuentas++;
             this.lugar = eParaisosFiscales.Bahamas;
-            this._listadoClientes = new List<Cliente>();
+            this._listadoClientes = new List<Cliente>();//
         }
 
         static CuentaOffShore()
@@ -51,37 +51,37 @@ namespace Laboratorio02Clase06
             this.beneficio = beneficio;
             //this.cantidadDeCuentas = cantidadDeCuentas;
             
-        }
+        }     
+    }
 
-        enum eParaisosFiscales
-        {
-            Anguila,
-            Bahamas,
-            Belice,
-            Delaware,
-            Gibraltar,
-            Hong_Kong,
-            Mauricio,
-            Panama,
-            Seychelles,
-            Singapur,
-            Suiza
-        }
+    enum eParaisosFiscales
+    {
+        Anguila,
+        Bahamas,
+        Belice,
+        Delaware,
+        Gibraltar,
+        Hong_Kong,
+        Mauricio,
+        Panama,
+        Seychelles,
+        Singapur,
+        Suiza
+    }
 
-        enum eTipoProducto
-        {
-            cuentas_bancarias,
-            polizas_de_seguros,
-            inversiones_inmobiliarias,
-            sociedades_extranjeras,
-            fondos_de_inversion
-        }
+    public enum eTipoProducto
+    {
+        cuentas_bancarias,
+        polizas_de_seguros,
+        inversiones_inmobiliarias,
+        sociedades_extranjeras,
+        fondos_de_inversion
+    }
 
-        enum eTipoBeneficio
-        {
-            secreto_bancario,
-            beneficios_fiscales,
-            secreto_bancario_y_beneficios_fiscales
-        }
+    public enum eTipoBeneficio
+    {
+        secreto_bancario,
+        beneficios_fiscales,
+        secreto_bancario_y_beneficios_fiscales
     }
 }

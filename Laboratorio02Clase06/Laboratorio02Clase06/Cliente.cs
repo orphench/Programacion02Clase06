@@ -21,7 +21,7 @@ namespace Laboratorio02Clase06
         private string _nombre;
         private eTipoCliente _tipoDeCliente;
 
-        private static Cliente()
+        static Cliente()
         {
  
         }
@@ -44,13 +44,39 @@ namespace Laboratorio02Clase06
             this._nombre = nombre;
         }
 
-        enum eTipoCliente
+        private void CrearAlias()
         {
-            PoliticoCorrupto,
-            EmpresarioCorrupto,
-            JugadorDeFutbol,
-            Financista,
-            MaestroRural
+            Random numero = new Random();
+            this._aliasParaIncognito = numero.Next(1111, 9999) + this._nacionalidad + eTipoCliente.EmpresarioCorrupto;
+
         }
+
+        public string GetAlias()
+        {
+
+
+            return this._aliasParaIncognito;
+        }
+
+        private string RetornarDatos()
+        {
+            return "0";
+        }
+
+        public string RetornarDatos(Cliente unCliente)
+        {
+            return "0";
+        }
+
+        
+    }
+
+    public enum eTipoCliente
+    {
+        PoliticoCorrupto,
+        EmpresarioCorrupto,
+        JugadorDeFutbol,
+        Financista,
+        MaestroRural
     }
 }

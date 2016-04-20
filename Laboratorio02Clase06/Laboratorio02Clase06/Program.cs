@@ -10,7 +10,9 @@ namespace Laboratorio02Clase06
     {
         static void Main(string[] args)
         {
+            Cliente unCliente = new Cliente(eTipoCliente.EmpresarioCorrupto, "Pepito", "Argentina");
 
+            Console.WriteLine(unCliente);
         }
     }
 }
